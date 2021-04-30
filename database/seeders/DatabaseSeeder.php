@@ -14,11 +14,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            RoleSeeder::class,
            ProduitSeeder::class, //pour importer les seeders kon aura a l'interieur
             CategorieSeeder::class,
-            RoleSeeder::class,
         ]);
 
-        \App\Models\User::factory(10)->create();
+        // \App\Models\User::factory(10)->create();
     }
 }
